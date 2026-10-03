@@ -154,8 +154,28 @@
 }
 
 /* --------------------------------------------------------------------------
-   Store Product Grid, Materials Grid & Shop Card Responsiveness
+   Store Product Grid, Materials Grid, Project Options & Shop Card Responsiveness
    -------------------------------------------------------------------------- */
+.project-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+.project-option-card {
+  background: rgba(43, 18, 76, 0.04);
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.project-option-card:hover {
+  border-color: var(--color-purpura-arquitectonico);
+  background: #FFFFFF;
+  box-shadow: 0 10px 30px rgba(43, 18, 76, 0.08);
+}
+
 @media (max-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -168,6 +188,14 @@
   }
 
   .material-card {
+    padding: 2rem;
+  }
+
+  .project-options-grid {
+    gap: 1.5rem;
+  }
+
+  .project-option-card {
     padding: 2rem;
   }
 }
@@ -196,6 +224,25 @@
   .material-card .capability-desc {
     font-size: 0.88rem;
     line-height: 1.5;
+  }
+
+  .project-options-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .project-option-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .project-option-card .capability-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-option-card .capability-desc {
+    font-size: 0.88rem;
+    margin-bottom: 1.25rem !important;
   }
 
   .shop-card-body {
@@ -237,5 +284,6 @@
     right: 0.75rem;
   }
 }
+
 
 
