@@ -326,6 +326,11 @@ function getProducts() {
   return BUFFALO_PRODUCTS;
 }
 
+function getFeaturedProducts() {
+  return BUFFALO_PRODUCTS.filter(p => p.featured === true);
+}
+
 function getProductById(id) {
   return BUFFALO_PRODUCTS.find(p => p.id === id);
 }
+
