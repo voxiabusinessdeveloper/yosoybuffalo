@@ -11,7 +11,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--header-height);
+  min-height: var(--header-height);
+  height: auto;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -19,12 +20,13 @@
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(43, 18, 76, 0.08);
-  transition: background-color var(--transition-fast), height var(--transition-fast), border-bottom var(--transition-fast);
+  transition: background-color var(--transition-fast), padding var(--transition-fast), border-bottom var(--transition-fast), box-shadow var(--transition-fast);
+  padding: 0.6rem 0;
 }
 
 .site-header.is-scrolled {
   background-color: rgba(250, 244, 240, 0.96);
-  height: 12vh;
+  padding: 0.35rem 0;
   border-bottom: 1px solid rgba(43, 18, 76, 0.15);
   box-shadow: 0 4px 20px rgba(25, 0, 25, 0.05);
 }
