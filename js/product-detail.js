@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
 
   // Gallery Thumbnail Swapping
-  const mainImg = document.getElementById('main-gallery-img');
+  const mainImgElem = document.getElementById('main-gallery-img');
   const mainLink = document.getElementById('main-gallery-link');
   const thumbs = container.querySelectorAll('.thumb-btn');
 
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
       thumbs.forEach(tb => tb.classList.remove('is-active'));
       t.classList.add('is-active');
       const src = t.getAttribute('data-src');
-      if (mainImg) mainImg.src = src;
+      if (mainImgElem) mainImgElem.src = src;
       if (mainLink) mainLink.href = src;
     });
   });
