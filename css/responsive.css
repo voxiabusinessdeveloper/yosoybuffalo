@@ -198,6 +198,15 @@
   .project-option-card {
     padding: 2rem;
   }
+
+  .applications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .app-card {
+    aspect-ratio: 4/3;
+  }
 }
 
 @media (max-width: 640px) {
@@ -245,6 +254,29 @@
     margin-bottom: 1.25rem !important;
   }
 
+  .applications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .app-card {
+    aspect-ratio: 16/9;
+  }
+
+  .app-card-content {
+    padding: 1.25rem;
+  }
+
+  .app-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .app-card-desc {
+    font-size: 0.82rem;
+    margin-bottom: 0.5rem;
+  }
+
   .shop-card-body {
     padding: 1.25rem;
   }
@@ -284,6 +316,7 @@
     right: 0.75rem;
   }
 }
+
 
 
 
