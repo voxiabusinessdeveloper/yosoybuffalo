@@ -1,0 +1,449 @@
+/* ==========================================================================
+   COMPONENTS CSS — BUFFALO MANUFACTURA ARQUITECTÓNICA
+   Header, Footer, Cards, Modals, Navigation, Badges (Luminous Light Theme)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HEADER / NAVIGATION
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: rgba(250, 244, 240, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(43, 18, 76, 0.08);
+  transition: background-color var(--transition-fast), height var(--transition-fast), border-bottom var(--transition-fast);
+}
+
+.site-header.is-scrolled {
+  background-color: rgba(250, 244, 240, 0.96);
+  height: 12vh;
+  border-bottom: 1px solid rgba(43, 18, 76, 0.15);
+  box-shadow: 0 4px 20px rgba(25, 0, 25, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.header-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-carbon-profundo);
+  text-decoration: none;
+  z-index: 1010;
+}
+
+.brand-logo-svg {
+  height: 42px;
+  width: auto;
+  color: var(--color-purpura-arquitectonico);
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo-link:hover .brand-logo-svg {
+  transform: scale(1.04);
+}
+
+.brand-name-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 1.2rem;
+  font-weight: var(--fw-black);
+  letter-spacing: 0.15em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-carbon-profundo);
+}
+
+.brand-subtitle {
+  font-size: 0.52rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.35em;
+  color: var(--color-purpura-arquitectonico);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Desktop Nav Links (Row 2 Layout) */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  border-top: 1px solid rgba(43, 18, 76, 0.08);
+  padding-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  font-size: 0.78rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding: 0.4rem 0.5rem;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-purpura-arquitectonico);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-carbon-profundo);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-carbon-profundo);
+  border: 1px solid var(--color-purpura-arquitectonico);
+  transition: all var(--transition-fast);
+}
+
+.header-cta:hover {
+  background-color: var(--color-purpura-arquitectonico);
+  color: #FFFFFF;
+}
+
+/* Mobile Toggle Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  z-index: 1010;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-icon {
+  width: 26px;
+  height: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-carbon-profundo);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.mobile-menu-btn.is-active .burger-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-btn.is-active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.is-active .burger-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile Fullscreen Menu Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 8vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+}
+
+.mobile-nav-drawer.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.mobile-nav-link {
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  font-weight: var(--fw-black);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--color-purpura-arquitectonico);
+  transform: translateX(10px);
+}
+
+.mobile-nav-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+
+/* --------------------------------------------------------------------------
+   2. FOOTER (Luminous & Sophisticated)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: #F2E3DA;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-md);
+  color: var(--color-carbon-profundo);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 4rem;
+  margin-bottom: var(--space-xl);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  max-width: 32ch;
+  line-height: 1.7;
+}
+
+.footer-heading {
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-purpura-arquitectonico);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-link {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-purpura-arquitectonico);
+}
+
+.footer-contact-item {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(43, 18, 76, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+
+/* --------------------------------------------------------------------------
+   3. EDITORIAL PROJECT CARDS
+   -------------------------------------------------------------------------- */
+.project-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: var(--color-bg-surface);
+  color: var(--color-carbon-profundo);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+}
+
+.project-media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.project-media-wrapper.ratio-wide {
+  aspect-ratio: 16/10;
+}
+
+.project-media-wrapper.ratio-square {
+  aspect-ratio: 1/1;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow), filter var(--transition-slow);
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(25, 0, 25, 0) 35%, rgba(25, 0, 25, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  color: #FFFFFF;
+}
+
+.project-category {
+  font-size: 0.7rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-rosa-empolvado);
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. LIGHTBOX / MODAL
+   -------------------------------------------------------------------------- */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(25, 0, 25, 0.92);
+  backdrop-filter: blur(15px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+}
+
+.lightbox-modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

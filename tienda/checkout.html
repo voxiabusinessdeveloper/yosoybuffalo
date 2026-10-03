@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — BUFFALO Shop</title>
+  <meta name="description" content="Finalizar pedido de soluciones y objetos de manufactura arquitectónica BUFFALO.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/store.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-container">
+      <div class="header-inner">
+        <a href="../index.html" class="brand-logo-link" aria-label="BUFFALO - Inicio">
+          <svg class="brand-logo-svg" viewBox="0 0 500 280" fill="none">
+            <g fill="currentColor">
+              <polygon points="40,260 140,260 250,150 210,150" opacity="0.95"/>
+              <polygon points="210,150 250,150 430,30 330,170" opacity="0.8"/>
+              <polygon points="430,30 470,120 440,150 380,130" opacity="0.9"/>
+              <polygon points="140,260 250,150 330,170 270,260" opacity="0.88"/>
+              <polygon points="330,170 430,30 410,210 330,170" opacity="0.75"/>
+              <polygon points="270,260 330,170 410,210 370,260" opacity="0.65"/>
+              <polygon points="430,30 470,120 440,190 395,175" opacity="0.95"/>
+              <polygon points="470,120 480,140 450,220 405,220 440,190" opacity="0.7"/>
+              <polygon points="450,220 430,260 395,220 405,220" opacity="1"/>
+              <path d="M425,140 C440,110 455,90 460,85 C450,110 440,135 430,155 Z" fill="var(--color-rosa-empolvado)"/>
+            </g>
+          </svg>
+          <div class="brand-name-group">
+            <span class="brand-title">BUFFALO</span>
+            <span class="brand-subtitle">MANUFACTURA ARQUITECTÓNICA</span>
+          </div>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegación de la tienda">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="index.html#seccion-categorias" class="nav-link">Materiales</a>
+          <a href="index.html#seccion-catalogo" class="nav-link">Catálogo Completo</a>
+          <a href="cotizacion.html" class="nav-link">Cotizar a Medida</a>
+        </nav>
+
+        <div class="header-actions-group">
+          <!-- Search Trigger -->
+          <button type="button" class="icon-btn-header search-trigger-btn" aria-label="Buscar productos">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+
+          <!-- Cart Icon Link -->
+          <a href="carrito.html" class="cart-icon-link" aria-label="Ver carrito de compras">
+            <svg class="cart-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            <span class="cart-badge-count" id="cart-badge-count">0</span>
+          </a>
+
+          <a href="cotizacion.html" class="header-cta">
+            Cotizar Celosía
+          </a>
+        </div>
+
+        <button class="mobile-menu-btn" aria-label="Abrir menú de navegación">
+          <div class="burger-icon">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-nav-drawer">
+    <nav class="mobile-nav-links">
+      <a href="../index.html" class="mobile-nav-link">Inicio</a>
+      <a href="../nosotros.html" class="mobile-nav-link">Nosotros</a>
+      <a href="../proyectos.html" class="mobile-nav-link">Proyectos</a>
+      <a href="index.html" class="mobile-nav-link">Tienda</a>
+      <a href="carrito.html" class="mobile-nav-link">Carrito</a>
+      <a href="../contacto.html" class="mobile-nav-link">Contacto</a>
+    </nav>
+  </div>
+
+  <main id="main-content" class="section-padding" style="padding-top: calc(var(--header-height) + 3rem);">
+    <div class="site-container">
+      
+      <span class="label-editorial reveal-fade-up">PROCESO DE COMPRA</span>
+      <h1 class="heading-display reveal-fade-up" style="transition-delay:0.1s; margin-bottom: 2rem;">Checkout</h1>
+
+      <div class="contact-grid">
+        
+        <!-- FORM -->
+        <div class="reveal-fade-up" style="background: rgba(43, 18, 76, 0.25); padding: 3rem; border: 1px solid var(--color-border);">
+          <form id="checkout-form" class="architectural-form" novalidate>
+            <h2 class="heading-section" style="font-size:1.5rem; margin-bottom:1.5rem;">Información del Cliente y Envío</h2>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+              <div class="form-group">
+                <label for="checkout-fname" class="form-label">Nombre *</label>
+                <input type="text" id="checkout-fname" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-lname" class="form-label">Apellido</label>
+                <input type="text" id="checkout-lname" class="form-input">
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+              <div class="form-group">
+                <label for="checkout-email" class="form-label">Correo Electrónico *</label>
+                <input type="email" id="checkout-email" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-phone" class="form-label">Teléfono</label>
+                <input type="tel" id="checkout-phone" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-address" class="form-label">Dirección de Envío *</label>
+              <input type="text" id="checkout-address" class="form-input" placeholder="Calle, número, colonia" required>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem;">
+              <div class="form-group">
+                <label for="checkout-city" class="form-label">Ciudad</label>
+                <input type="text" id="checkout-city" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-state" class="form-label">Estado</label>
+                <input type="text" id="checkout-state" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-zip" class="form-label">C.P.</label>
+                <input type="text" id="checkout-zip" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-notes" class="form-label">Notas del Pedido (Opcional)</label>
+              <textarea id="checkout-notes" class="form-textarea" rows="3" placeholder="Especificaciones de entrega, referencias, etc."></textarea>
+            </div>
+
+            <div id="checkout-feedback" class="form-feedback" aria-live="polite"></div>
+
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center; margin-top:1rem;">
+              CONTINUAR AL PAGO
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- ORDER SUMMARY -->
+        <div class="reveal-fade-up" style="transition-delay:0.15s;">
+          <div id="checkout-summary-container" class="cart-summary-box">
+            <!-- Rendered dynamically by checkout.js -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo-link">
+            <svg class="brand-logo-svg" viewBox="0 0 500 280" fill="none">
+              <g fill="currentColor">
+                <polygon points="40,260 140,260 250,150 210,150" opacity="0.95"/>
+                <polygon points="210,150 250,150 430,30 330,170" opacity="0.8"/>
+                <polygon points="430,30 470,120 440,150 380,130" opacity="0.9"/>
+                <polygon points="140,260 250,150 330,170 270,260" opacity="0.88"/>
+                <polygon points="330,170 430,30 410,210 330,170" opacity="0.75"/>
+                <polygon points="270,260 330,170 410,210 370,260" opacity="0.65"/>
+                <polygon points="430,30 470,120 440,190 395,175" opacity="0.95"/>
+                <polygon points="470,120 480,140 450,220 405,220 440,190" opacity="0.7"/>
+                <polygon points="450,220 430,260 395,220 405,220" opacity="1"/>
+                <path d="M425,140 C440,110 455,90 460,85 C450,110 440,135 430,155 Z" fill="var(--color-rosa-empolvado)"/>
+              </g>
+            </svg>
+            <div class="brand-name-group">
+              <span class="brand-title">BUFFALO</span>
+              <span class="brand-subtitle">MANUFACTURA ARQUITECTÓNICA</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Transformamos conceptos de arquitectura, interiorismo y diseño en objetos y soluciones físicas.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Inicio</a></li>
+            <li><a href="../nosotros.html" class="footer-link">Nosotros</a></li>
+            <li><a href="../proyectos.html" class="footer-link">Proyectos</a></li>
+            <li><a href="index.html" class="footer-link">Tienda / Catálogo</a></li>
+            <li><a href="../contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Tienda & Soluciones</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Ver Todo el Catálogo</a></li>
+            <li><a href="carrito.html" class="footer-link">Mi Carrito</a></li>
+            <li><a href="cotizacion.html" class="footer-link">Cotizaciones Especiales</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contacto</h4>
+          <div class="footer-links">
+            <p class="footer-contact-item">[Correo de contacto directo]</p>
+            <p class="footer-contact-item">[Teléfono / WhatsApp de atención]</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; BUFFALO MANUFACTURA ARQUITECTÓNICA.</span>
+        <span>Materializar lo que el diseño imagina.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/products-data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

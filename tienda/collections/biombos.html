@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biombos y Cabeceras — Colección BUFFALO</title>
+  <meta name="description" content="Colección de biombos decorativos y cabeceras celosía desarrolladas por BUFFALO.">
+
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/sections.css">
+  <link rel="stylesheet" href="../../css/store.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="site-container">
+      <div class="header-inner">
+        <div class="header-top-row">
+          <a href="../../index.html" class="brand-logo-link" aria-label="BUFFALO - Inicio">
+            <svg class="brand-logo-svg" viewBox="0 0 500 280" fill="none">
+              <g fill="currentColor">
+                <polygon points="40,260 140,260 250,150 210,150" opacity="0.95" />
+                <polygon points="210,150 250,150 430,30 330,170" opacity="0.8" />
+                <polygon points="430,30 470,120 440,150 380,130" opacity="0.9" />
+                <polygon points="140,260 250,150 330,170 270,260" opacity="0.88" />
+                <polygon points="330,170 430,30 410,210 330,170" opacity="0.75" />
+                <polygon points="270,260 330,170 410,210 370,260" opacity="0.65" />
+                <polygon points="430,30 470,120 440,190 395,175" opacity="0.95" />
+                <polygon points="470,120 480,140 450,220 405,220 440,190" opacity="0.7" />
+                <polygon points="450,220 430,260 395,220 405,220" opacity="1" />
+                <path d="M425,140 C440,110 455,90 460,85 C450,110 440,135 430,155 Z" fill="var(--color-rosa-empolvado)" />
+              </g>
+            </svg>
+            <div class="brand-name-group">
+              <span class="brand-title">BUFFALO</span>
+              <span class="brand-subtitle">MANUFACTURA ARQUITECTÓNICA</span>
+            </div>
+          </a>
+
+          <div class="header-actions-group">
+            <button type="button" class="icon-btn-header search-trigger-btn" aria-label="Buscar productos">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </button>
+            <a href="../carrito.html" class="cart-icon-link" aria-label="Ver carrito de compras">
+              <svg class="cart-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+              <span class="cart-badge-count" id="cart-badge-count">0</span>
+            </a>
+            <a href="../cotizacion.html" class="header-cta">Cotizar Biombo</a>
+          </div>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Navegación de la tienda">
+          <a href="../../index.html" class="nav-link">Inicio</a>
+          <a href="celosias.html" class="nav-link">Celosías</a>
+          <a href="barandales.html" class="nav-link">Barandales</a>
+          <a href="bardas-y-cercas.html" class="nav-link">Bardas y Cercas</a>
+          <a href="biombos.html" class="nav-link active">Biombos y Cabeceras</a>
+          <a href="mobiliario-urbano.html" class="nav-link">Mobiliario Urbano</a>
+          <a href="senalizacion.html" class="nav-link">Señalización</a>
+          <a href="../../nosotros.html" class="nav-link">Conócenos</a>
+          <a href="../../contacto.html" class="nav-link">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="project-header-section" aria-label="Colección Biombos y Cabeceras">
+      <div class="site-container">
+        <span class="label-editorial">COLECCIÓN / BIOMBOS & CABECERAS</span>
+        <h1 class="heading-display" style="margin-top: 0.5rem;">Biombos & Cabeceras</h1>
+        <p class="subheading-editorial" style="margin-top: 1rem; max-width: 700px;">
+          Piezas móbiles y cabeceras celosía trabajadas en madera maciza y aluminio anodizado para división y diseño interior.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding" style="padding-top:0;">
+      <div class="site-container">
+        <div id="collection-grid" class="product-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-title">BUFFALO</span>
+          <p class="footer-desc">Manufactura Arquitectónica & Celosías de Alta Precisión.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/products-data.js"></script>
+  <script src="../../js/search.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('collection-grid');
+      const items = BUFFALO_PRODUCTS.filter(p => p.category === 'biombos' || p.category === 'celosias');
+      
+      grid.innerHTML = items.map(p => `
+        <article class="product-card is-visible">
+          <div class="product-image-container">
+            <img src="${p.image}" alt="${p.name}" class="product-card-img" loading="lazy">
+            ${p.badge ? `<span class="product-card-badge">${p.badge}</span>` : ''}
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-category">${p.categoryName}</span>
+            <h3 class="product-card-title">
+              <a href="../producto.html?id=${p.id}">${p.name}</a>
+            </h3>
+            <p class="product-card-desc">${p.description}</p>
+            <div class="product-card-footer">
+              <span class="product-card-price">${p.price > 0 ? `${p.currency}${p.price.toLocaleString()} / ${p.unit}` : 'A Cotizar'}</span>
+              <a href="../producto.html?id=${p.id}" class="btn-primary" style="padding:0.5rem 1rem; font-size:0.75rem;">Ver Detalle</a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    });
+  </script>
+</body>
+
+</html>
