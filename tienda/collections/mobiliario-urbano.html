@@ -104,7 +104,7 @@
       grid.innerHTML = items.map(p => `
         <article class="product-card is-visible">
           <div class="product-image-container">
-            <img src="${p.image}" alt="${p.name}" class="product-card-img" loading="lazy">
+            <img src="../../${p.image}" alt="${p.name}" class="product-card-img" loading="lazy">
             ${p.badge ? `<span class="product-card-badge">${p.badge}</span>` : ''}
           </div>
           <div class="product-card-body">
