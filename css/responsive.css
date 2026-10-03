@@ -154,12 +154,21 @@
 }
 
 /* --------------------------------------------------------------------------
-   Store Product Grid & Shop Card Responsiveness
+   Store Product Grid, Materials Grid & Shop Card Responsiveness
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.75rem;
+  }
+
+  .materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .material-card {
+    padding: 2rem;
   }
 }
 
@@ -167,6 +176,26 @@
   .product-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .materials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .material-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .material-card .capability-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .material-card .capability-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
   }
 
   .shop-card-body {
@@ -208,4 +237,5 @@
     right: 0.75rem;
   }
 }
+
 
