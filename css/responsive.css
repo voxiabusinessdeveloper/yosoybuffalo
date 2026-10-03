@@ -152,3 +152,60 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Store Product Grid & Shop Card Responsiveness
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .shop-card-body {
+    padding: 1.25rem;
+  }
+
+  .shop-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .shop-card-price {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+
+  .shop-card-actions {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .shop-card-actions .btn-sm {
+    text-align: center;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .shop-badge {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.5rem;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .wishlist-btn {
+    width: 32px;
+    height: 32px;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
