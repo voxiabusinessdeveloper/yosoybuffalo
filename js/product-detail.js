@@ -26,13 +26,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set Page Title
   document.title = `${product.name} — BUFFALO Shop`;
 
+  // Resolve relative image paths if in subfolder
+  function fixImgPath(path) {
+    if (!path || path.startsWith('http')) return path;
+    if (window.location.pathname.includes('/tienda/collections/')) return '../../' + path;
+    if (window.location.pathname.includes('/tienda/')) return '../' + path;
+    return path;
+  }
+
+  const mainImg = fixImgPath(product.image);
+
   // Gallery HTML
   const gallery = product.gallery && product.gallery.length > 0 ? product.gallery : [product.image];
-  const galleryThumbsHTML = gallery.map((img, idx) => `
-    <button type="button" class="thumb-btn ${idx === 0 ? 'is-active' : ''}" data-src="${img}" aria-label="Ver fotografía ${idx + 1}">
-      <img src="${img}" alt="${product.name} vista ${idx + 1}" style="width:100%; height:100%; object-fit:cover;">
-    </button>
-  `).join('');
+  const galleryThumbsHTML = gallery.map((img, idx) => {
+    const fixedPath = fixImgPath(img);
+    return `
+      <button type="button" class="thumb-btn ${idx === 0 ? 'is-active' : ''}" data-src="${fixedPath}" aria-label="Ver fotografía ${idx + 1}">
+        <img src="${fixedPath}" alt="${product.name} vista ${idx + 1}" style="width:100%; height:100%; object-fit:cover;">
+      </button>
+    `;
+  }).join('');
 
   // Price / Quote CTA
   const priceDisplay = product.customizable
@@ -67,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- LEFT: GALLERY -->
         <div class="is-visible">
           <div style="position:relative; overflow:hidden; aspect-ratio:4/3; background:var(--color-purpura-arquitectonico); border:1px solid var(--color-border); margin-bottom:1rem;">
-            <a href="${gallery[0]}" data-lightbox id="main-gallery-link">
-              <img src="${gallery[0]}" alt="${product.name}" id="main-gallery-img" class="project-img" style="width:100%; height:100%; object-fit:cover;">
+            <a href="${mainImg}" data-lightbox id="main-gallery-link">
+              <img src="${mainImg}" alt="${product.name}" id="main-gallery-img" class="project-img" style="width:100%; height:100%; object-fit:cover;">
             </a>
           </div>
           <div style="display:flex; gap:1rem; flex-wrap:wrap;">

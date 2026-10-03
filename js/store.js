@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Render Product Card HTML (is-visible added to ensure immediate display of dynamically created elements)
   function createProductCardHTML(product) {
+    let imgSrc = product.image || '';
+    if (imgSrc && !imgSrc.startsWith('http')) {
+      if (window.location.pathname.includes('/tienda/collections/')) {
+        imgSrc = '../../' + imgSrc;
+      } else if (window.location.pathname.includes('/tienda/')) {
+        imgSrc = '../' + imgSrc;
+      }
+    }
+
     const isWishlisted = typeof isInWishlist === 'function' && isInWishlist(product.id);
     const priceDisplay = product.customizable 
       ? `A Cotizar`
@@ -28,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return `
       <article class="shop-card is-visible" data-category="${product.category}">
         <div class="shop-card-media">
-          <img src="${product.image}" alt="${product.name}" class="shop-card-img" loading="lazy" width="600" height="450">
+          <img src="${imgSrc}" alt="${product.name}" class="shop-card-img" loading="lazy" width="600" height="450">
           ${product.badge ? `<span class="shop-badge">${product.badge}</span>` : ''}
           <button type="button" class="wishlist-btn ${isWishlisted ? 'is-active' : ''}" data-id="${product.id}" aria-label="Añadir a favoritos">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
