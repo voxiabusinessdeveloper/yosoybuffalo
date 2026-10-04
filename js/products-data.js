@@ -7,7 +7,7 @@
 const BUFFALO_PRODUCTS = [
   {
     "id": "prod-cel-001",
-    "name": "Celos\u00eda de Roble Macizo y Nogal",
+    "name": "CELOSIAS MDF",
     "category": "celosias",
     "categoryName": "Celos\u00edas Arquitect\u00f3nicas",
     "price": 4800,
@@ -32,7 +32,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-cel-002",
-    "name": "Celos\u00eda Perimetral Negra Met\u00e1lica",
+    "name": "HERRERIA",
     "category": "celosias",
     "categoryName": "Celos\u00edas Arquitect\u00f3nicas",
     "price": 3900,
@@ -57,7 +57,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-cel-003",
-    "name": "Cielo Celos\u00eda Suspendido en Atrio",
+    "name": "CELOSIAS METÁLICAS",
     "category": "celosias",
     "categoryName": "Celos\u00edas Arquitect\u00f3nicas",
     "price": 5600,
@@ -82,33 +82,33 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-fac-001",
-    "name": "Fachada Ventilada con Louvers Met\u00e1licos",
+    "name": "FACHADAS 3D",
     "category": "fachadas",
     "categoryName": "Fachadas & Louvers",
     "price": 6200,
     "currency": "$",
     "unit": "m\u00b2",
-    "image": "assets/fachadas/fachada-louvers-metalicos-01.jpg",
+    "image": "assets/fachadas/fachada-3d-01.jpg",
     "gallery": [
+      "assets/fachadas/fachada-3d-01.jpg",
+      "assets/fachadas/fachada-3d-02.jpg",
       "assets/fachadas/fachada-louvers-metalicos-01.jpg",
       "assets/fachadas/fachada-perforada-cnc.jpg",
-      "assets/fachadas/fachada-acero-corten-ventilada.jpg",
-      "assets/fachadas/sistema-cortasol-louver-aluminio.jpg",
-      "assets/fachadas/fachada-envolvente-celosia.jpg"
+      "assets/fachadas/fachada-acero-corten-ventilada.jpg"
     ],
-    "description": "Envolvente arquitect\u00f3nica de fachadas con lamas met\u00e1licas de alto perfil y cortasoles perforados.",
+    "description": "Envolvente arquitect\u00f3nica de fachadas geom\u00e9tricas 3D con paneles triangulares perforados CNC y patrones volum\u00e9tricos.",
     "available": true,
     "customizable": true,
     "sku": "BUF-FAC-001",
-    "material": "Aluminio Extruido / Acero Corten",
-    "dimensions": "M\u00f3dulos verticales a medida del proyecto",
+    "material": "Aluminio Extruido / Acero Corten / Perforado CNC",
+    "dimensions": "M\u00f3dulos tridimensionales a medida del proyecto",
     "leadTime": "20 d\u00edas h\u00e1biles",
     "featured": true,
-    "badge": "Fachada Comercial"
+    "badge": "Fachada Geom\u00e9trica 3D"
   },
   {
     "id": "prod-fac-002",
-    "name": "Sistema Louver Plegable Residencial",
+    "name": "BIOMBOS",
     "category": "fachadas",
     "categoryName": "Fachadas & Louvers",
     "price": 7400,
@@ -133,7 +133,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-acu-001",
-    "name": "Paneles Ac\u00fasticos Ranurados para Muro",
+    "name": "MUROS INTERIORES",
     "category": "acustica",
     "categoryName": "Paneles Ac\u00fasticos & Plafones",
     "price": 3200,
@@ -160,7 +160,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-acu-002",
-    "name": "Baffles Ac\u00fasticos Suspendidos para Lobby",
+    "name": "PLAFONES COLGANTES",
     "category": "acustica",
     "categoryName": "Paneles Ac\u00fasticos & Plafones",
     "price": 4100,
@@ -187,7 +187,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-bar-001",
-    "name": "Barandal de Celos\u00eda Corten con Pasamanos de Roble",
+    "name": "BARANDALES",
     "category": "barandales",
     "categoryName": "Barandales & Pasamanos",
     "price": 3600,
@@ -211,7 +211,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-pue-001",
-    "name": "Puerta Principal de Acero Corten Calado",
+    "name": "PUERTAS Y PORTONES",
     "category": "puertas-corten",
     "categoryName": "Puertas de Acero Corten",
     "price": 14500,
@@ -236,7 +236,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-lam-001",
-    "name": "Lambr\u00edn Arquitect\u00f3nico de Listones de Madera",
+    "name": "LAMBRINES",
     "category": "lambrin",
     "categoryName": "Lambrines & Revestimientos",
     "price": 2950,
@@ -259,7 +259,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-int-001",
-    "name": "Divisi\u00f3n Celos\u00eda de Espacios Interiores",
+    "name": "PERGOLAS",
     "category": "biombos-y-cabeceras",
     "categoryName": "Biombos, Cabeceras & Espacios",
     "price": 5200,
@@ -288,7 +288,7 @@ const BUFFALO_PRODUCTS = [
   },
   {
     "id": "prod-cat-001",
-    "name": "Cat\u00e1logo de Patrones Geom\u00e9tricos Buffalo B12-B23",
+    "name": "CELOSIAS ALUMINIO",
     "category": "celosias",
     "categoryName": "Celos\u00edas Arquitect\u00f3nicas",
     "price": 0,
