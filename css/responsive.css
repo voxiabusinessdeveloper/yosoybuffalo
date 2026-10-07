@@ -27,6 +27,7 @@
    Tablet Medium (Max Width: 1380px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1380px) {
+
   .desktop-nav,
   .header-cta {
     display: none;
@@ -51,7 +52,12 @@
     gap: 1.5rem;
   }
 
-  .grid-col-12, .grid-col-8, .grid-col-7, .grid-col-6, .grid-col-5, .grid-col-4 {
+  .grid-col-12,
+  .grid-col-8,
+  .grid-col-7,
+  .grid-col-6,
+  .grid-col-5,
+  .grid-col-4 {
     grid-column: span 2;
   }
 
@@ -70,6 +76,7 @@
     gap: 1.5rem;
   }
 }
+
 
 @media (max-width: 768px) {
   :root {
@@ -116,7 +123,12 @@
     grid-template-columns: 1fr;
   }
 
-  .grid-col-12, .grid-col-8, .grid-col-7, .grid-col-6, .grid-col-5, .grid-col-4 {
+  .grid-col-12,
+  .grid-col-8,
+  .grid-col-7,
+  .grid-col-6,
+  .grid-col-5,
+  .grid-col-4 {
     grid-column: span 1;
   }
 
@@ -175,7 +187,8 @@
     max-width: 100%;
   }
 
-  .btn-primary, .btn-outline {
+  .btn-primary,
+  .btn-outline {
     width: 100%;
     justify-content: center;
     padding: 1rem 1.25rem;
@@ -363,7 +376,3 @@
     right: 0.75rem;
   }
 }
-
-
-
-
