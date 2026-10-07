@@ -36,12 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Display validation success feedback without pretending to send real email backend
+      const phone = '5212227576528';
+      let message = `¡Hola! Me gustaría cotizar un proyecto con BUFFALO:\n\n` +
+        `• *Nombre:* ${nameInput.value.trim()}\n` +
+        (document.getElementById('form-company')?.value.trim() ? `• *Empresa:* ${document.getElementById('form-company').value.trim()}\n` : '') +
+        `• *Correo:* ${emailInput.value.trim()}\n` +
+        (document.getElementById('form-phone')?.value.trim() ? `• *Teléfono:* ${document.getElementById('form-phone').value.trim()}\n` : '') +
+        (document.getElementById('form-category')?.value ? `• *Tipo de Proyecto:* ${document.getElementById('form-category').value}\n` : '') +
+        `• *Detalles:* ${messageInput.value.trim()}`;
+
+      const waUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+
       formFeedback.style.display = 'block';
       formFeedback.style.borderLeftColor = 'var(--color-rosa-empolvado)';
       formFeedback.innerHTML = `
-        <strong>Solicitud validada correctamente.</strong><br>
-        <span style="font-size:0.85rem; opacity:0.85;">Nota de desarrollo: El formulario está listo para ser conectado a su backend o servicio como Formspree / EmailJS.</span>
+        <strong>Redirigiendo a WhatsApp...</strong><br>
+        <span style="font-size:0.85rem; opacity:0.85;">Los detalles de tu proyecto se han preparado para enviar a nuestro equipo de ventas.</span>
       `;
       contactForm.reset();
     });

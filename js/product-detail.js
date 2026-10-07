@@ -52,19 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ? `Fabricación Bajo Cotización`
     : `${product.currency}${product.price.toLocaleString('es-MX')} <span class="price-unit">/ ${product.unit}</span>`;
 
-  const actionButtonHTML = product.customizable
-    ? `<a href="cotizacion.html?product=${product.id}" class="btn-primary" style="width:100%; justify-content:center;">
-        SOLICITAR COTIZACIÓN
-        <span class="btn-arrow" aria-hidden="true">→</span>
-       </a>`
-    : `<div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+  const actionButtonHTML = `<div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
         <div class="qty-control">
           <button type="button" class="qty-btn" id="detail-qty-minus">-</button>
           <input type="text" id="detail-qty-input" class="qty-input" value="1" readonly>
           <button type="button" class="qty-btn" id="detail-qty-plus">+</button>
         </div>
         <button type="button" class="btn-primary" id="detail-add-cart-btn" style="flex:1;">
-          AGREGAR AL CARRITO
+          COTIZAR POR WHATSAPP
           <span class="btn-arrow" aria-hidden="true">→</span>
         </button>
        </div>`;

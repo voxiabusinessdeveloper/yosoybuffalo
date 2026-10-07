@@ -35,11 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      const phone = '5212227576528';
+      let message = `¡Hola! Solicito cotización formal para el siguiente proyecto:\n\n` +
+        `• *Nombre:* ${name}\n` +
+        `• *Correo:* ${email}\n` +
+        (productInput?.value ? `• *Producto de Interés:* ${productInput.value}\n` : '') +
+        `• *Especificaciones:* ${desc}`;
+
+      const waUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+
       quoteFeedback.style.display = 'block';
       quoteFeedback.style.borderLeftColor = 'var(--color-rosa-empolvado)';
       quoteFeedback.innerHTML = `
-        <strong>Solicitud de cotización validada.</strong><br>
-        <span style="font-size:0.85rem; opacity:0.85;">Nota de desarrollo: Los datos del proyecto están listos para enviarse a su correo técnico o CRM vía Formspree / EmailJS / backend.</span>
+        <strong>Redirigiendo a WhatsApp...</strong><br>
+        <span style="font-size:0.85rem; opacity:0.85;">Tu solicitud ha sido estructurada y se enviará directamente a nuestro equipo de proyectos.</span>
       `;
       quoteForm.reset();
     });

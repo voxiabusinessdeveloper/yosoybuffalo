@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
       : `${product.currency}${product.price.toLocaleString('es-MX')} <span class="price-unit">/ ${product.unit}</span>`;
 
     const ctaButton = product.customizable
-      ? `<a href="cotizacion.html?product=${product.id}" class="btn-outline btn-sm">Solicitar Cotización</a>`
-      : `<button type="button" class="btn-primary btn-sm btn-add-cart" data-id="${product.id}">Agregar al Carrito</button>`;
+      ? `<button type="button" class="btn-primary btn-sm btn-add-cart" data-id="${product.id}">Cotizar por WhatsApp</button>`
+      : `<button type="button" class="btn-primary btn-sm btn-add-cart" data-id="${product.id}">Cotizar por WhatsApp</button>`;
 
     return `
       <article class="shop-card is-visible" data-category="${product.category}">

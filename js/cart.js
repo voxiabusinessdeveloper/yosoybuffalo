@@ -33,32 +33,25 @@ function addToCart(productId, qty = 1) {
     return false;
   }
 
-  if (product.customizable) {
-    // Custom quote product -> redirect or open quote modal
-    window.location.href = (window.location.pathname.includes('/tienda/') ? '' : 'tienda/') + `cotizacion.html?product=${productId}`;
-    return false;
+  const phone = '5212227576528';
+  let message = `¡Hola! Me interesa cotizar/adquirir el siguiente producto:\n\n` +
+    `• *Producto:* ${product.name}\n` +
+    `• *Categoría:* ${product.categoryName || 'General'}\n` +
+    (product.sku ? `• *SKU:* ${product.sku}\n` : '') +
+    `• *Cantidad:* ${qty} ${product.unit || 'unidad(es)'}\n`;
+
+  if (!product.customizable && product.price) {
+    message += `• *Precio unitario estimado:* $${product.price.toLocaleString('es-MX')} MXN / ${product.unit || 'unidad'}\n`;
   }
 
-  const cart = getCart();
-  const existingItemIndex = cart.findIndex(item => item.id === productId);
+  message += `\n¿Me podrías brindar más información sobre tiempos de entrega y proceso de compra?`;
 
-  if (existingItemIndex > -1) {
-    cart[existingItemIndex].quantity += qty;
-  } else {
-    cart.push({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      currency: product.currency,
-      unit: product.unit,
-      image: product.image,
-      categoryName: product.categoryName,
-      quantity: qty
-    });
+  const waUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+  window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+  if (typeof showToastNotification === 'function') {
+    showToastNotification(`Abriendo WhatsApp para cotizar "${product.name}"...`);
   }
-
-  saveCart(cart);
-  showToastNotification(`"${product.name}" se ha añadido al carrito.`);
   return true;
 }
 
