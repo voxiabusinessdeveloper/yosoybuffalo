@@ -62,9 +62,6 @@ const initBuffaloPromo = () => {
             </p>
 
             <div class="buffalo-promo-actions">
-              <button type="button" class="buffalo-promo-btn buffalo-promo-btn-secondary" id="buffaloBtnLearnMore">
-                Conocer más
-              </button>
               <button type="button" class="buffalo-promo-btn buffalo-promo-btn-primary" id="buffaloBtnQuoteNow">
                 Cotizar ahora
               </button>
