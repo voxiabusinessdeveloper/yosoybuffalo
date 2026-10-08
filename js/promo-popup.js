@@ -1,6 +1,6 @@
 /* ==========================================================================
    PROMO POPUP / BANNER JS — BUFFALO MANUFACTURA ARQUITECTÓNICA
-   Triggers: 8s delay OR 30% scroll on target sections
+   Triggers: 12s delay OR 30% scroll on target sections
    Behavior: Target pages (Proyectos, Celosías, Fachadas) & Frequency Control
    ========================================================================== */
 
@@ -133,8 +133,8 @@ const initBuffaloPromo = () => {
     overlay.classList.remove('is-visible');
   };
 
-  // Trigger 1: Timer 8 seconds
-  const timer = setTimeout(showModal, 8000);
+  // Trigger 1: Timer 12 seconds
+  const timer = setTimeout(showModal, 12000);
 
   // Trigger 2: Scroll 30%
   const checkScroll = () => {
