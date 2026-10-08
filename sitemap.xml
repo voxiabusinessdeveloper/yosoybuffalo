@@ -1,75 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.buffalomanufactura.com/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/og-image.jpg</image:loc>
+      <image:title>BUFFALO Manufactura Arquitectónica - Celosías y Paneles Paramétricos</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/logo/buffalo-isotipo-oficial.jpg</image:loc>
+      <image:title>Logotipo Oficial BUFFALO Manufactura Arquitectónica</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/fachada-voronoi/fachada-voronoi-7.jpg</image:loc>
+      <image:title>Fachada Escultórica Voronoi y Celosías Paramétricas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/canopy-monumental/canopy-monumental-1.jpg</image:loc>
+      <image:title>Canopy y Pérgola Monumental con Cielo Escultórico</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/celosias-ramificadas/celosias-ramificadas-1.jpg</image:loc>
+      <image:title>Fachada de Celosías Ramificadas Complejo Institucional</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/nosotros.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/og-image.jpg</image:loc>
+      <image:title>BUFFALO Taller de Manufactura Arquitectónica</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/logo/buffalo-isotipo-oficial.jpg</image:loc>
+      <image:title>BUFFALO Isotipo Oficial</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/proyectos.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/fachada-voronoi/fachada-voronoi-7.jpg</image:loc>
+      <image:title>Fachada Escultórica Voronoi y Celosías Paramétricas por BUFFALO</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/canopy-monumental/canopy-monumental-1.jpg</image:loc>
+      <image:title>Canopy y Pérgola Monumental con Cielo Escultórico</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/celosias-ramificadas/celosias-ramificadas-1.jpg</image:loc>
+      <image:title>Fachada de Celosías Ramificadas Complejo Institucional</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/louvers-solares/louvers-solares-3.jpg</image:loc>
+      <image:title>Sistema de Louvers Metálicos y Control Solar Pasivo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/fachada-voronoi/fachada-voronoi-5.jpg</image:loc>
+      <image:title>Logística de elevación y montaje de celosías gigantes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/canopy-monumental/canopy-monumental-4.jpg</image:loc>
+      <image:title>Cielo pergolado de celosía escultórica</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/proyecto.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/fachada-voronoi/fachada-voronoi-7.jpg</image:loc>
+      <image:title>Fachada Escultórica Voronoi - Detalle de celosías paramétricas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/proyectos/fachada-voronoi/fachada-voronoi-2.jpg</image:loc>
+      <image:title>Celosía Voronoi en Ensamble</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/contacto.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/logo/buffalo-isotipo-oficial.jpg</image:loc>
+      <image:title>Contacto BUFFALO Manufactura Arquitectónica</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/blog/index.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/celosia-parametrica-roble.webp</image:loc>
+      <image:title>Guía de Celosías Paramétricas en Roble</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/plafond-acustico-madera.webp</image:loc>
+      <image:title>Plafón Acústico de Madera</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/panel-laton-oxido.webp</image:loc>
+      <image:title>Paneles de Latón Oxidado</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/revestimiento-alistonado-nogal.webp</image:loc>
+      <image:title>Revestimiento Alistonado en Nogal</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/blog/articulo-celosias-parametrica.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/celosia-parametrica-roble.webp</image:loc>
+      <image:title>Celosía de madera paramétrica en taller BUFFALO</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/panel-laton-oxido.webp</image:loc>
+      <image:title>Paneles de Latón Oxidado</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/revestimiento-alistonado-nogal.webp</image:loc>
+      <image:title>Revestimiento Nogal Alistonado</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/blog/articulo-nogal-vs-roble.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/revestimiento-alistonado-nogal.webp</image:loc>
+      <image:title>Revestimiento alistonado en nogal de alta precisión</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/blog/articulo-patina-laton-bronce.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/panel-laton-oxido.webp</image:loc>
+      <image:title>Panel de latón pátina artesanal BUFFALO</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/blog/articulo-plafones-acusticos.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/catalogo/plafond-acustico-madera.webp</image:loc>
+      <image:title>Plafón acústico de madera en sala de juntas corporativa</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/politica-de-cookies.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/logo/buffalo-isotipo-oficial.jpg</image:loc>
+      <image:title>BUFFALO Isotipo Oficial</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/terminos-y-condiciones.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://www.buffalomanufactura.com/assets/logo/buffalo-isotipo-oficial.jpg</image:loc>
+      <image:title>BUFFALO Isotipo Oficial</image:title>
+    </image:image>
   </url>
 </urlset>
