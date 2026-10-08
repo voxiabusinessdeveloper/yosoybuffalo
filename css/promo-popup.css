@@ -1,0 +1,254 @@
+/* ==========================================================================
+   PROMO POPUP / BANNER ARCHITECTURAL MODAL — BUFFALO
+   ========================================================================== */
+
+.buffalo-promo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(25, 0, 25, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.buffalo-promo-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+.buffalo-promo-modal {
+  background-color: var(--color-bg-primary, #FAF4F0);
+  border: 1px solid rgba(43, 18, 76, 0.15);
+  box-shadow: 0 24px 48px -12px rgba(25, 0, 25, 0.35);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  position: relative;
+  overflow-y: auto;
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10000;
+}
+
+
+.buffalo-promo-overlay.is-visible .buffalo-promo-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Header & Close Button */
+.buffalo-promo-header {
+  padding: 1.5rem 1.75rem 0.5rem 1.75rem;
+  position: relative;
+}
+
+.buffalo-promo-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: var(--fw-bold, 700);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-rosa-empolvado, #DFB6B2);
+  background-color: var(--color-purpura-arquitectonico, #2B124C);
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.buffalo-promo-title {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 1.35rem;
+  font-weight: var(--fw-bold, 700);
+  color: var(--color-carbon-profundo, #190019);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.buffalo-promo-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted, rgba(25, 0, 25, 0.5));
+  font-size: 1.6rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+.buffalo-promo-close:hover {
+  background-color: rgba(43, 18, 76, 0.08);
+  color: var(--color-carbon-profundo, #190019);
+}
+
+/* Body Content */
+.buffalo-promo-body {
+  padding: 0.5rem 1.75rem 1.5rem 1.75rem;
+}
+
+.buffalo-promo-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary, rgba(25, 0, 25, 0.8));
+  margin-bottom: 1.25rem;
+}
+
+/* Options / Toggle Views */
+.buffalo-promo-form-view {
+  display: none;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(43, 18, 76, 0.1);
+  padding-top: 1.25rem;
+  animation: promoFadeIn 0.3s ease forwards;
+}
+
+.buffalo-promo-form-view.is-active {
+  display: block;
+}
+
+@keyframes promoFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Minimalist Form Elements */
+.buffalo-promo-field {
+  margin-bottom: 0.9rem;
+}
+
+.buffalo-promo-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: var(--fw-semibold, 600);
+  color: var(--color-carbon-profundo, #190019);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.buffalo-promo-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(43, 18, 76, 0.2);
+  border-radius: 6px;
+  color: var(--color-carbon-profundo, #190019);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.buffalo-promo-input:focus {
+  outline: none;
+  border-color: var(--color-purpura-arquitectonico, #2B124C);
+  box-shadow: 0 0 0 3px rgba(43, 18, 76, 0.1);
+}
+
+.buffalo-promo-radios {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.buffalo-promo-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: var(--fw-medium, 500);
+  color: var(--color-carbon-profundo, #190019);
+  cursor: pointer;
+}
+
+.buffalo-promo-radio-label input[type="radio"] {
+  accent-color: var(--color-purpura-arquitectonico, #2B124C);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* CTAs Buttons */
+.buffalo-promo-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.buffalo-promo-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  font-weight: var(--fw-semibold, 600);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.buffalo-promo-btn-primary {
+  background-color: var(--color-purpura-arquitectonico, #2B124C);
+  color: #FFFFFF;
+}
+
+.buffalo-promo-btn-primary:hover {
+  background-color: var(--color-ciruela-contemporaneo, #522B5B);
+  transform: translateY(-1px);
+}
+
+.buffalo-promo-btn-secondary {
+  background-color: transparent;
+  color: var(--color-purpura-arquitectonico, #2B124C);
+  border: 1px solid var(--color-purpura-arquitectonico, #2B124C);
+}
+
+.buffalo-promo-btn-secondary:hover {
+  background-color: rgba(43, 18, 76, 0.05);
+}
+
+.buffalo-promo-submit {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Success Message */
+.buffalo-promo-success {
+  display: none;
+  padding: 1.25rem 0.5rem 0.5rem 0.5rem;
+  text-align: center;
+  color: var(--color-purpura-arquitectonico, #2B124C);
+}
+
+.buffalo-promo-success.is-active {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .buffalo-promo-modal {
+    padding: 0.25rem;
+  }
+  .buffalo-promo-actions {
+    flex-direction: column;
+  }
+}

@@ -39,7 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Load Promo Popup Script
+  const promoScript = document.createElement('script');
+  const isBlog = window.location.pathname.includes('/blog/');
+  promoScript.src = isBlog ? '../js/promo-popup.js' : 'js/promo-popup.js';
+  document.body.appendChild(promoScript);
+
   // Log Initialization
   console.log('BUFFALO MANUFACTURA ARQUITECTÓNICA — System Initialized.');
 });
+
 
