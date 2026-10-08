@@ -50,10 +50,33 @@
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
-  align-items: flex-end;
+  display: block;
+  max-width: 860px;
+}
+
+.hero-section .heading-display {
+  line-height: 1.0;
+  text-transform: uppercase;
+}
+
+.hero-title-brand {
+  display: block;
+  font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--color-carbon-profundo);
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle-brand {
+  display: block;
+  font-size: clamp(1rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
 }
 
 .hero-tagline {
