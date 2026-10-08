@@ -46,14 +46,14 @@ const initBuffaloPromo = () => {
         <button type="button" class="buffalo-promo-close" id="buffaloPromoClose" aria-label="Cerrar ventana emergente">&times;</button>
         
         <div class="buffalo-promo-header">
-          <span class="buffalo-promo-badge">Beneficio Profesional</span>
-          <h3 class="buffalo-promo-title" id="buffaloPromoTitle">Bonificación por Proyecto Integral</h3>
+          <span class="buffalo-promo-badge">Beneficio Exclusivo</span>
+          <h3 class="buffalo-promo-title" id="buffaloPromoTitle">¡Te Premiamos en tu Proyecto!</h3>
         </div>
 
         <div class="buffalo-promo-body">
           <div id="buffaloPromoInitialContent">
             <p class="buffalo-promo-text">
-              ¿Eres arquitecto o desarrollador? Al contratar Fabricación + Instalación con Buffalo, accede a un descuento directo en cotización o a un monedero electrónico profesional.
+              ¿Eres arquitecto, diseñador o desarrollador? Te premiamos con un descuento directo en cotización ó un monedero electrónico al realizar tu proyecto con BUFFALO.
             </p>
 
             <div class="buffalo-promo-actions">
