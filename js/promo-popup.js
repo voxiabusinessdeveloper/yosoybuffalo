@@ -5,19 +5,14 @@
    ========================================================================== */
 
 const initBuffaloPromo = () => {
-  // 1. Session check (don't show again if closed or submitted in current session)
-  if (sessionStorage.getItem('buffalo_promo_dismissed')) {
-    return;
-  }
-
-  // 2. Behavioral Segmentation check
+  // 1. Behavioral Segmentation check
 
   // Target URL paths or page content containing projects, celosias, or fachadas
   const pathname = window.location.pathname.toLowerCase();
   const pageTitle = document.title.toLowerCase();
   const bodyText = document.body.innerText.toLowerCase();
 
-  const isTargetPage = 
+  const isTargetPage =
     pathname.includes('proyecto') ||
     pathname.includes('tienda') ||
     pathname.includes('catalogo') ||
@@ -136,7 +131,6 @@ const initBuffaloPromo = () => {
 
   const closeModal = () => {
     overlay.classList.remove('is-visible');
-    sessionStorage.setItem('buffalo_promo_dismissed', 'true');
   };
 
   // Trigger 1: Timer 8 seconds
@@ -215,7 +209,7 @@ const initBuffaloPromo = () => {
       `• *Solicitud:* Cotizar proyecto con bonificación profesional / monedero electrónico.`;
 
     const waUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
-    
+
     // UI Feedback
     formView.style.display = 'none';
     initialContent.style.display = 'none';
