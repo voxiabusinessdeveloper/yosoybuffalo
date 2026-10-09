@@ -63,17 +63,18 @@
   display: block;
   font-size: clamp(3.2rem, 7.5vw, 6.2rem);
   font-weight: 900;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.16em;
   color: var(--color-carbon-profundo);
-  line-height: 0.9;
+  line-height: 0.95;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .hero-subtitle-brand {
   display: block;
   font-size: clamp(1rem, 2.2vw, 1.7rem);
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.22em;
   line-height: 1.2;
   color: var(--color-text-secondary);
   text-transform: uppercase;
