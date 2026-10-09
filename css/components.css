@@ -47,6 +47,37 @@
   width: 100%;
 }
 
+.header-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--color-carbon-profundo);
+  background-color: rgba(43, 18, 76, 0.05);
+  border: 1px solid rgba(43, 18, 76, 0.1);
+  transition: all var(--transition-fast);
+}
+
+.header-social-link:hover {
+  color: #ffffff;
+  background-color: var(--color-purpura-arquitectonico);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 18, 76, 0.2);
+}
+
+.header-social-link .footer-icon-svg {
+  width: 17px;
+  height: 17px;
+}
+
 .brand-logo-link {
   display: flex;
   align-items: center;
