@@ -397,11 +397,19 @@
   color: var(--color-purpura-arquitectonico);
 }
 
-.footer-icon-svg {
+.footer-icon-svg,
+.lucide,
+[data-lucide] {
   width: 18px;
   height: 18px;
-  fill: currentColor;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .footer-bottom {
