@@ -5,27 +5,9 @@
    ========================================================================== */
 
 const initBuffaloPromo = () => {
-  // 1. Behavioral Segmentation check
-
-  // Target URL paths or page content containing projects, celosias, or fachadas
-  const pathname = window.location.pathname.toLowerCase();
-  const pageTitle = document.title.toLowerCase();
-  const bodyText = document.body.innerText.toLowerCase();
-
-  const isTargetPage =
-    pathname.includes('proyecto') ||
-    pathname.includes('tienda') ||
-    pathname.includes('catalogo') ||
-    pageTitle.includes('proyecto') ||
-    pageTitle.includes('celosía') ||
-    pageTitle.includes('fachada') ||
-    bodyText.includes('celosías') ||
-    bodyText.includes('fachadas') ||
-    pathname === '/' ||
-    pathname.endsWith('index.html');
-
-  if (!isTargetPage) {
-    return; // Do not initialize on non-relevant pages
+  // Check if user has already closed or submitted the promo modal in this session
+  if (sessionStorage.getItem('buffalo_promo_dismissed') === 'true') {
+    return;
   }
 
   // Inject CSS link dynamically if not present
@@ -33,8 +15,7 @@ const initBuffaloPromo = () => {
     const link = document.createElement('link');
     link.id = 'buffalo-promo-style';
     link.rel = 'stylesheet';
-    // Determine relative path for css/promo-popup.css based on current location
-    const isBlogSubdir = pathname.includes('/blog/');
+    const isBlogSubdir = window.location.pathname.includes('/blog/');
     link.href = isBlogSubdir ? '../css/promo-popup.css' : 'css/promo-popup.css';
     document.head.appendChild(link);
   }
@@ -125,29 +106,15 @@ const initBuffaloPromo = () => {
     if (hasTriggered) return;
     hasTriggered = true;
     overlay.classList.add('is-visible');
-    // Remove scroll listener once triggered
-    window.removeEventListener('scroll', checkScroll);
   };
 
   const closeModal = () => {
     overlay.classList.remove('is-visible');
+    sessionStorage.setItem('buffalo_promo_dismissed', 'true');
   };
 
-  // Trigger 1: Timer 20 seconds
-  const timer = setTimeout(showModal, 20000);
-
-  // Trigger 2: Scroll 30%
-  const checkScroll = () => {
-    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-    if (totalHeight <= 0) return;
-    const scrolledRatio = window.scrollY / totalHeight;
-    if (scrolledRatio >= 0.3) {
-      clearTimeout(timer);
-      showModal();
-    }
-  };
-
-  window.addEventListener('scroll', checkScroll, { passive: true });
+  // Sole Trigger: Timer exactly at 20 seconds (20000ms)
+  setTimeout(showModal, 20000);
 
   // Event Listeners
   if (closeBtn) {
