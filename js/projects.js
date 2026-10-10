@@ -87,4 +87,94 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 3. Fullscreen Projects Carousel Handler (100vw x 100vh)
+  const carouselSection = document.getElementById('seccion-proyectos');
+  if (carouselSection) {
+    const slides = carouselSection.querySelectorAll('.project-slide');
+    const dots = carouselSection.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('projects-carousel-prev');
+    const nextBtn = document.getElementById('projects-carousel-next');
+
+    if (slides.length > 0) {
+      let currentIndex = 0;
+      let autoplayTimer = null;
+
+      const goToSlide = (index) => {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+          }
+        });
+
+        dots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+
+        currentIndex = index;
+      };
+
+      const startAutoplay = () => {
+        stopAutoplay();
+        autoplayTimer = setInterval(() => {
+          goToSlide(currentIndex + 1);
+        }, 6000);
+      };
+
+      const stopAutoplay = () => {
+        if (autoplayTimer) {
+          clearInterval(autoplayTimer);
+          autoplayTimer = null;
+        }
+      };
+
+      prevBtn?.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+        startAutoplay();
+      });
+
+      nextBtn?.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+        startAutoplay();
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          goToSlide(i);
+          startAutoplay();
+        });
+      });
+
+      // Pause on hover
+      carouselSection.addEventListener('mouseenter', stopAutoplay);
+      carouselSection.addEventListener('mouseleave', startAutoplay);
+
+      // Keyboard navigation when section is in viewport
+      document.addEventListener('keydown', (e) => {
+        const rect = carouselSection.getBoundingClientRect();
+        const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isInViewport) {
+          if (e.key === 'ArrowLeft') {
+            goToSlide(currentIndex - 1);
+            startAutoplay();
+          } else if (e.key === 'ArrowRight') {
+            goToSlide(currentIndex + 1);
+            startAutoplay();
+          }
+        }
+      });
+
+      startAutoplay();
+    }
+  }
 });
+

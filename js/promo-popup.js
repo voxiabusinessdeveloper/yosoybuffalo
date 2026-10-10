@@ -15,8 +15,8 @@ const initBuffaloPromo = () => {
     const link = document.createElement('link');
     link.id = 'buffalo-promo-style';
     link.rel = 'stylesheet';
-    const isBlogSubdir = window.location.pathname.includes('/blog/');
-    link.href = isBlogSubdir ? '../css/promo-popup.css' : 'css/promo-popup.css';
+    const isSubfolder = window.location.pathname.includes('/blog/') || window.location.pathname.includes('/aplicaciones/');
+    link.href = isSubfolder ? '../css/promo-popup.css' : 'css/promo-popup.css';
     document.head.appendChild(link);
   }
 

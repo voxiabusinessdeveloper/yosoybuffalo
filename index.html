@@ -224,46 +224,47 @@
 
         <div class="applications-grid">
           <!-- App 1: FACHADAS 3D -->
-          <a href="proyectos.html" class="app-card reveal-fade-up">
+          <a href="aplicaciones/fachadas-arquitectonicas.html" class="app-card reveal-fade-up">
             <img src="assets/aplicaciones/fachadas-arquitectonicas.jpeg" alt="Fachadas 3D" class="app-card-img"
               loading="lazy">
             <div class="app-card-content">
               <h3 class="app-card-title">FACHADAS ARQUITECTONICAS</h3>
               <p class="app-card-desc">Control solar y envolventes geométricas 3D de corte CNC.</p>
-              <span class="contact-label" style="color:var(--color-rosa-empolvado);">Ver proyectos →</span>
+              <span class="contact-label" style="color:var(--color-rosa-empolvado);">Ver galería →</span>
             </div>
           </a>
 
           <!-- App 2: CIELOS Y PLAFONES -->
-          <a href="proyectos.html" class="app-card reveal-fade-up" style="transition-delay: 0.1s;">
+          <a href="aplicaciones/cielos-y-plafones.html" class="app-card reveal-fade-up" style="transition-delay: 0.1s;">
             <img src="assets/aplicaciones/cielos-y-plafones.jpg" alt="Cielos y Plafones" class="app-card-img"
               loading="lazy">
             <div class="app-card-content">
               <h3 class="app-card-title">CIELOS Y PLAFONES</h3>
               <p class="app-card-desc">Techos entramados y plafones suspendidos de alta acústica y diseño.</p>
-              <span class="contact-label" style="color:var(--color-rosa-empolvado);">Ver proyectos →</span>
+              <span class="contact-label" style="color:var(--color-rosa-empolvado);">Ver galería →</span>
             </div>
           </a>
 
           <!-- App 3: MUROS DIVISORIOS Y LAMBRINES (INTERIOR Y EXTERIOR) -->
-          <a href="proyectos.html" class="app-card reveal-fade-up" style="transition-delay: 0.15s;">
+          <a href="aplicaciones/muros-divisorios-y-lambrines.html" class="app-card reveal-fade-up"
+            style="transition-delay: 0.15s;">
             <img src="assets/aplicaciones/muros-divisorios-y-lambrines.jpg" alt="Muros Divisorios y Lambrines"
               class="app-card-img" loading="lazy">
             <div class="app-card-content">
               <h3 class="app-card-title">MUROS DIVISORIOS Y LAMBRINES</h3>
               <p class="app-card-desc">Revestimientos, panelados y particiones decorativas de espacio.</p>
-              <span class="contact-label" style="color:var(--color-rosa-empolvado);">Ver proyectos →</span>
+              <span class="contact-label" style="color:var(--color-rosa-empolvado);">Ver galería →</span>
             </div>
           </a>
 
           <!-- App 4: NUESTROS TALLERES -->
-          <a href="nosotros.html" class="app-card reveal-fade-up" style="transition-delay: 0.2s;">
+          <a href="aplicaciones/nuestros-talleres.html" class="app-card reveal-fade-up" style="transition-delay: 0.2s;">
             <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
               alt="Nuestros Talleres" class="app-card-img" loading="lazy">
             <div class="app-card-content">
               <h3 class="app-card-title">NUESTROS TALLERES</h3>
               <p class="app-card-desc">Procesos de fabricación, alta ebanistería y tecnología CNC.</p>
-              <span class="contact-label" style="color:var(--color-rosa-empolvado);">Conocer más →</span>
+              <span class="contact-label" style="color:var(--color-rosa-empolvado);">Ver galería →</span>
             </div>
           </a>
         </div>
@@ -323,54 +324,148 @@
       </div>
     </section>
 
-    <!-- 5. SECCIÓN PROYECTOS DESTACADOS & CONEXIÓN CON PRODUCTOS -->
-    <section class="section-padding"
-      style="background-color: var(--color-purpura-arquitectonico); border-top: 1px solid var(--color-border);"
-      aria-label="Proyectos ejecutados">
-      <div class="site-container">
-        <span class="label-editorial reveal-fade-up">CASOS DE EJECUCIÓN</span>
-        <div
-          style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom: 2.5rem; flex-wrap:wrap; gap:1rem;">
-          <h2 class="heading-section reveal-fade-up" style="transition-delay: 0.1s;">Proyectos Realizados</h2>
-          <a href="proyectos.html" class="btn-outline reveal-fade-up" style="transition-delay: 0.2s;">Ver Portfolio
-            Completo →</a>
-        </div>
+    <!-- 5. SECCIÓN PROYECTOS DESTACADOS - FULLSCREEN CAROUSEL 100VW x 100VH -->
+    <section class="projects-carousel-section" id="seccion-proyectos" aria-label="Proyectos ejecutados">
+      <div class="projects-carousel-track" id="projects-carousel-track">
 
-        <div class="editorial-grid">
-          <article class="grid-col-7 reveal-fade-up">
-            <a href="proyecto.html" class="project-card">
-              <div class="project-media-wrapper ratio-wide">
-                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85"
-                  alt="Residencia Los Olivos" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <span class="project-category">CIELOS & TECHOS</span>
-                  <h3 class="project-title">Residencia Los Olivos</h3>
-                  <div class="project-meta">
-                    <span>Solución Utilizada: Plafón Suspendido Roble</span>
-                    <span>2025</span>
-                  </div>
-                </div>
+        <!-- Slide 1 -->
+        <article class="project-slide active">
+          <div class="project-slide-bg">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=85"
+              alt="Residencia Los Olivos" loading="lazy">
+          </div>
+          <div class="project-slide-overlay"></div>
+          <div class="project-slide-content">
+            <span class="project-slide-badge">01 / 04 — CIELOS & TECHOS</span>
+            <h2 class="project-slide-title">Residencia Los Olivos</h2>
+            <p class="project-slide-desc">Plafón suspendido en madera maciza de roble con entramado acústico de
+              geometría continua y luz indirecta.</p>
+            <div class="project-slide-meta">
+              <div class="meta-block">
+                <span class="meta-label">SOLUCIÓN UTILIZADA</span>
+                <span class="meta-value">Plafón Suspendido Roble</span>
               </div>
-            </a>
-          </article>
+              <div class="meta-block">
+                <span class="meta-label">UBICACIÓN & AÑO</span>
+                <span class="meta-value">Puebla, México — 2025</span>
+              </div>
+            </div>
+            <div class="project-slide-actions">
+              <a href="proyecto.html" class="btn-primary">Explorar Proyecto completo <span
+                  class="btn-arrow">→</span></a>
+              <a href="proyectos.html" class="btn-outline">Ver Todo el Portfolio</a>
+            </div>
+          </div>
+        </article>
 
-          <article class="grid-col-5 reveal-fade-up" style="transition-delay: 0.15s;">
-            <a href="proyecto.html" class="project-card">
-              <div class="project-media-wrapper ratio-wide">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=85"
-                  alt="Pabellón Mineral" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <span class="project-category">CELOSÍAS & REVESTIMIENTOS</span>
-                  <h3 class="project-title">Pabellón Mineral</h3>
-                  <div class="project-meta">
-                    <span>Solución Utilizada: Celosía Bronce CNC</span>
-                    <span>2024</span>
-                  </div>
-                </div>
+        <!-- Slide 2 -->
+        <article class="project-slide">
+          <div class="project-slide-bg">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=85"
+              alt="Pabellón Mineral" loading="lazy">
+          </div>
+          <div class="project-slide-overlay"></div>
+          <div class="project-slide-content">
+            <span class="project-slide-badge">02 / 04 — CELOSÍAS & REVESTIMIENTOS</span>
+            <h2 class="project-slide-title">Pabellón Mineral</h2>
+            <p class="project-slide-desc">Envolvente exterior y celosía autosoportada en chapa de bronce procesada
+              mediante corte CNC de alta exactitud.</p>
+            <div class="project-slide-meta">
+              <div class="meta-block">
+                <span class="meta-label">SOLUCIÓN UTILIZADA</span>
+                <span class="meta-value">Celosía Bronce CNC</span>
               </div>
-            </a>
-          </article>
+              <div class="meta-block">
+                <span class="meta-label">UBICACIÓN & AÑO</span>
+                <span class="meta-value">CDMX — 2024</span>
+              </div>
+            </div>
+            <div class="project-slide-actions">
+              <a href="proyecto.html" class="btn-primary">Explorar Proyecto completo <span
+                  class="btn-arrow">→</span></a>
+              <a href="proyectos.html" class="btn-outline">Ver Todo el Portfolio</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 3 -->
+        <article class="project-slide">
+          <div class="project-slide-bg">
+            <img src="assets/aplicaciones/fachadas-arquitectonicas.jpeg" alt="Torre Corporativa Lumina" loading="lazy">
+          </div>
+          <div class="project-slide-overlay"></div>
+          <div class="project-slide-content">
+            <span class="project-slide-badge">03 / 04 — FACHADAS 3D</span>
+            <h2 class="project-slide-title">Torre Corporativa Lumina</h2>
+            <p class="project-slide-desc">Sistema bioclimático de fachadas parametrizadas en aluminio anodizado para
+              optimización de luz solar y eficiencia térmica.</p>
+            <div class="project-slide-meta">
+              <div class="meta-block">
+                <span class="meta-label">SOLUCIÓN UTILIZADA</span>
+                <span class="meta-value">Fachada Paramétrica 3D</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">UBICACIÓN & AÑO</span>
+                <span class="meta-value">Querétaro — 2024</span>
+              </div>
+            </div>
+            <div class="project-slide-actions">
+              <a href="proyecto.html" class="btn-primary">Explorar Proyecto completo <span
+                  class="btn-arrow">→</span></a>
+              <a href="proyectos.html" class="btn-outline">Ver Todo el Portfolio</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 4 -->
+        <article class="project-slide">
+          <div class="project-slide-bg">
+            <img src="assets/aplicaciones/muros-divisorios-y-lambrines.jpg" alt="Centro Cultural Origen" loading="lazy">
+          </div>
+          <div class="project-slide-overlay"></div>
+          <div class="project-slide-content">
+            <span class="project-slide-badge">04 / 04 — MUROS DIVISORIOS</span>
+            <h2 class="project-slide-title">Centro Cultural Origen</h2>
+            <p class="project-slide-desc">Muros divisorios pivotantes y lambrines acústicos en tzalam macizo con grabado
+              escultórico de patrón geométrico.</p>
+            <div class="project-slide-meta">
+              <div class="meta-block">
+                <span class="meta-label">SOLUCIÓN UTILIZADA</span>
+                <span class="meta-value">Lambrines & Particiones Tzalam</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">UBICACIÓN & AÑO</span>
+                <span class="meta-value">Oaxaca — 2025</span>
+              </div>
+            </div>
+            <div class="project-slide-actions">
+              <a href="proyecto.html" class="btn-primary">Explorar Proyecto completo <span
+                  class="btn-arrow">→</span></a>
+              <a href="proyectos.html" class="btn-outline">Ver Todo el Portfolio</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Controls & Navigation -->
+      <div class="projects-carousel-controls">
+        <button class="carousel-nav-btn carousel-prev" id="projects-carousel-prev" aria-label="Proyecto anterior">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <div class="carousel-dots" id="projects-carousel-dots">
+          <button class="carousel-dot active" data-index="0" aria-label="Ir a proyecto 1"></button>
+          <button class="carousel-dot" data-index="1" aria-label="Ir a proyecto 2"></button>
+          <button class="carousel-dot" data-index="2" aria-label="Ir a proyecto 3"></button>
+          <button class="carousel-dot" data-index="3" aria-label="Ir a proyecto 4"></button>
         </div>
+        <button class="carousel-nav-btn carousel-next" id="projects-carousel-next" aria-label="Proyecto siguiente">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
       </div>
     </section>
 
@@ -530,6 +625,7 @@
   <script src="js/main.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
+  <script src="js/projects.js"></script>
   <script src="js/search.js"></script>
 </body>
 

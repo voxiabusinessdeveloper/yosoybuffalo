@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load Promo Popup Script
   const promoScript = document.createElement('script');
-  const isBlog = window.location.pathname.includes('/blog/');
-  promoScript.src = isBlog ? '../js/promo-popup.js' : 'js/promo-popup.js';
+  const isSubfolder = window.location.pathname.includes('/blog/') || window.location.pathname.includes('/aplicaciones/');
+  promoScript.src = isSubfolder ? '../js/promo-popup.js' : 'js/promo-popup.js';
   document.body.appendChild(promoScript);
 
   // Log Initialization
