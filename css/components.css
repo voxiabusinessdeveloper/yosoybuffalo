@@ -581,42 +581,186 @@
 #site-preloader {
   position: fixed;
   inset: 0;
-  background-color: var(--color-bg-luminoso);
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--color-bg-primary);
   z-index: 99999;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  overflow: hidden;
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.55s ease, transform 0.55s ease;
 }
 
 #site-preloader.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: scale(1.01);
 }
 
-.preloader-brand-title {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.3em;
-  color: var(--color-purpura-arquitectonico);
+.preloader-skeleton-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.25rem var(--site-gutter, 5vw) 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  height: 100%;
 }
 
-.preloader-spinner {
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgba(43, 18, 76, 0.1);
-  border-top-color: var(--color-purpura-arquitectonico);
-  border-radius: 50%;
-  animation: preloader-spin 0.8s linear infinite;
+/* Skeleton Header Mockup */
+.preloader-sk-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(43, 18, 76, 0.08);
 }
 
-@keyframes preloader-spin {
-  to {
-    transform: rotate(360deg);
+.preloader-sk-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preloader-sk-logo {
+  width: 48px;
+  height: 34px;
+  border-radius: 4px;
+}
+
+.preloader-sk-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.preloader-sk-title {
+  width: 110px;
+  height: 14px;
+}
+
+.preloader-sk-subtitle {
+  width: 160px;
+  height: 8px;
+}
+
+.preloader-sk-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.preloader-sk-nav-item {
+  width: 70px;
+  height: 12px;
+}
+
+.preloader-sk-btn {
+  width: 140px;
+  height: 38px;
+  border-radius: 2px;
+}
+
+/* Skeleton Hero Mockup */
+.preloader-sk-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.75rem;
+  max-width: 850px;
+  padding-top: 1rem;
+}
+
+.preloader-sk-pill {
+  width: 160px;
+  height: 14px;
+}
+
+.preloader-sk-hero-title-1 {
+  width: 85%;
+  height: clamp(2rem, 5vw, 3.8rem);
+}
+
+.preloader-sk-hero-title-2 {
+  width: 65%;
+  height: clamp(1.8rem, 4.5vw, 3.2rem);
+}
+
+.preloader-sk-hero-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 550px;
+  margin-top: 0.5rem;
+}
+
+.preloader-sk-hero-line {
+  width: 100%;
+  height: 14px;
+}
+
+.preloader-sk-hero-line.short {
+  width: 70%;
+}
+
+.preloader-sk-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.preloader-sk-action-btn {
+  width: 170px;
+  height: 48px;
+  border-radius: 2px;
+}
+
+/* Skeleton Footer / Grid Peek */
+.preloader-sk-cards-peek {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: auto;
+  opacity: 0.85;
+}
+
+.preloader-sk-card {
+  height: 140px;
+  border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+  .preloader-sk-nav,
+  .preloader-sk-btn {
+    display: none;
+  }
+  .preloader-sk-cards-peek {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .preloader-sk-cards-peek {
+    display: none;
+  }
+  .preloader-sk-hero-title-1 {
+    width: 100%;
+  }
+  .preloader-sk-hero-title-2 {
+    width: 85%;
+  }
+  .preloader-sk-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .preloader-sk-action-btn {
+    width: 100%;
   }
 }
 
