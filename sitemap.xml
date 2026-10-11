@@ -87,13 +87,25 @@
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/contacto.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.buffalomanufactura.com/assets/logo/buffalo-isotipo-oficial.jpg</image:loc>
       <image:title>Contacto BUFFALO Manufactura Arquitectónica</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://www.buffalomanufactura.com/talento.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.buffalomanufactura.com/proveedores.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.buffalomanufactura.com/aplicaciones/fachadas-arquitectonicas.html</loc>

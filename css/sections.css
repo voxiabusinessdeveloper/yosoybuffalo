@@ -771,4 +771,160 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   10. NETWORK & COLLABORATION SECTION (RED BUFFALO)
+   -------------------------------------------------------------------------- */
+.network-section {
+  background-color: #FAF4F0;
+  border-top: 1px solid var(--color-border);
+  position: relative;
+}
+
+.network-header {
+  margin-bottom: 3.5rem;
+}
+
+.network-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.network-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(43, 18, 76, 0.12);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.network-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-purpura-arquitectonico);
+  box-shadow: 0 20px 40px rgba(43, 18, 76, 0.08);
+}
+
+.network-card-inner {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.network-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(43, 18, 76, 0.08);
+}
+
+.network-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(43, 18, 76, 0.06);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-purpura-arquitectonico);
+}
+
+.network-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-purpura-arquitectonico);
+  display: inline-block;
+}
+
+.network-tag-alt {
+  background: rgba(133, 79, 108, 0.1);
+  color: var(--color-mauve-mineral);
+}
+
+.network-tag-alt .network-tag-dot {
+  background-color: var(--color-mauve-mineral);
+}
+
+.network-card-num {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: var(--fw-black);
+  letter-spacing: 0.1em;
+  color: rgba(43, 18, 76, 0.22);
+}
+
+.network-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.network-kicker {
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-mauve-mineral);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.network-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: var(--fw-black);
+  letter-spacing: -0.02em;
+  color: var(--color-carbon-profundo);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.network-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.network-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  margin-bottom: 2.5rem;
+}
+
+.network-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-bg-primary);
+  border: 1px solid rgba(43, 18, 76, 0.1);
+  color: var(--color-carbon-profundo);
+  border-radius: 2px;
+}
+
+.network-card-footer {
+  margin-top: auto;
+}
+
+@media (max-width: 992px) {
+  .network-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .network-card-inner {
+    padding: 2.25rem 1.75rem;
+  }
+}
+
 
