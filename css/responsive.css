@@ -33,6 +33,14 @@
     display: none;
   }
 
+  .site-header {
+    min-height: 72px;
+  }
+
+  .header-inner {
+    padding: 0;
+  }
+
   .mobile-menu-btn {
     display: flex;
   }
@@ -178,6 +186,25 @@
 @media (max-width: 430px) {
   :root {
     --site-gutter: 5vw;
+    --header-height: 68px;
+  }
+
+  .site-header {
+    padding: 0.4rem 0;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+    width: auto;
+  }
+
+  .brand-logo-link {
+    gap: 0.6rem;
+  }
+
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
   }
 
   .hero-tagline {
