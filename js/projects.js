@@ -37,24 +37,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Lightbox Modal for Image Galleries
+  // 2. Lightbox Modal for Image Galleries (delegated / unified with main.js)
+  // If main.js has initialized it, we don't duplicate. We only initialize if not already present.
   const galleryItems = document.querySelectorAll('[data-lightbox]');
   let lightboxModal = document.querySelector('.lightbox-modal');
 
-  if (galleryItems.length > 0) {
+  if (galleryItems.length > 0 && !window.__buffaloLightboxReady) {
     if (!lightboxModal) {
       lightboxModal = document.createElement('div');
       lightboxModal.className = 'lightbox-modal';
       lightboxModal.innerHTML = `
+        <button class="lightbox-close" aria-label="Cerrar vista ampliada">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
         <div class="lightbox-content">
-          <button class="lightbox-close" aria-label="Cerrar vista ampliada">&times;</button>
-          <img src="" alt="" class="lightbox-img">
+          <div class="lightbox-img-container">
+            <img src="" alt="" class="lightbox-img">
+          </div>
+          <div class="lightbox-caption"></div>
         </div>
       `;
       document.body.appendChild(lightboxModal);
     }
 
     const lightboxImg = lightboxModal.querySelector('.lightbox-img');
+    const lightboxCaption = lightboxModal.querySelector('.lightbox-caption');
     const lightboxClose = lightboxModal.querySelector('.lightbox-close');
 
     galleryItems.forEach(item => {
@@ -65,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (imgSrc) {
           lightboxImg.src = imgSrc;
           lightboxImg.alt = imgAlt;
+          if (lightboxCaption) lightboxCaption.textContent = imgAlt;
           lightboxModal.classList.add('is-active');
           document.body.style.overflow = 'hidden';
         }
@@ -78,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lightboxClose?.addEventListener('click', closeLightbox);
     lightboxModal?.addEventListener('click', (e) => {
-      if (e.target === lightboxModal) closeLightbox();
+      if (e.target === lightboxModal || e.target.classList.contains('lightbox-content')) closeLightbox();
     });
 
     document.addEventListener('keydown', (e) => {
