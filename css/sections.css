@@ -985,14 +985,29 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding: 0.75rem 0;
   mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.celosias-carousel-container::before {
+  content: "";
+  position: absolute;
+  top: 0.75rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-border);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .celosias-carousel-track {
   display: flex;
   gap: 1.5rem;
   width: max-content;
+  position: relative;
+  z-index: 2;
   animation: celosiasInfiniteScroll 42s linear infinite;
 }
 
