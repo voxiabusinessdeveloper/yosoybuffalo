@@ -1138,3 +1138,259 @@
     min-height: 260px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   6. FLOATING WHATSAPP BUTTON (ESQUINA INFERIOR DERECHA)
+   -------------------------------------------------------------------------- */
+.buffalo-wa-float-container {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+}
+
+.buffalo-wa-float-container * {
+  box-sizing: border-box;
+}
+
+/* Tooltip / Speech card */
+.buffalo-wa-tooltip {
+  pointer-events: auto;
+  position: relative;
+  margin-right: 14px;
+  background-color: rgba(250, 244, 240, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(43, 18, 76, 0.16);
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: 0 10px 30px rgba(25, 0, 25, 0.14), 0 2px 6px rgba(0, 0, 0, 0.04);
+  max-width: 250px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(12px) scale(0.95);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.buffalo-wa-tooltip.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) scale(1);
+}
+
+.buffalo-wa-tooltip-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.buffalo-wa-status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.3);
+  animation: wa-status-pulse 2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes wa-status-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(37, 211, 102, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.buffalo-wa-status-text {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-purpura-arquitectonico, #2B124C);
+  flex-grow: 1;
+}
+
+.buffalo-wa-tooltip-close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted, rgba(25, 0, 25, 0.45));
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buffalo-wa-tooltip-close:hover {
+  color: var(--color-carbon-profundo, #190019);
+  transform: scale(1.15);
+}
+
+.buffalo-wa-tooltip-msg {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--color-text-secondary, rgba(25, 0, 25, 0.85));
+}
+
+.buffalo-wa-tooltip-msg strong {
+  color: var(--color-purpura-arquitectonico, #2B124C);
+  font-weight: 600;
+}
+
+/* Tooltip tail pointing right toward the WhatsApp button */
+.buffalo-wa-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background-color: rgba(250, 244, 240, 0.98);
+  border-top: 1px solid rgba(43, 18, 76, 0.16);
+  border-right: 1px solid rgba(43, 18, 76, 0.16);
+}
+
+/* Round WhatsApp Floating Button */
+.buffalo-wa-btn {
+  pointer-events: auto;
+  position: relative;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.42), 0 3px 10px rgba(0, 0, 0, 0.14);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, filter 0.3s ease;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.buffalo-wa-btn:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.58), 0 6px 14px rgba(0, 0, 0, 0.18);
+  filter: brightness(1.04);
+}
+
+.buffalo-wa-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.38);
+}
+
+.buffalo-wa-btn:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.7);
+  outline-offset: 4px;
+}
+
+/* Pulsing radar rings */
+.buffalo-wa-pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: #25D366;
+  opacity: 0.65;
+  z-index: -1;
+  animation: wa-ring-pulse 3s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  pointer-events: none;
+}
+
+.buffalo-wa-pulse-ring-2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: #25D366;
+  opacity: 0.45;
+  z-index: -1;
+  animation: wa-ring-pulse 3s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  animation-delay: 1.3s;
+  pointer-events: none;
+}
+
+@keyframes wa-ring-pulse {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+/* WhatsApp Icon SVG */
+.buffalo-wa-icon {
+  width: 36px;
+  height: 36px;
+  fill: #FFFFFF;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+  transition: transform 0.25s ease;
+}
+
+.buffalo-wa-btn:hover .buffalo-wa-icon {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .buffalo-wa-float-container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .buffalo-wa-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .buffalo-wa-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .buffalo-wa-tooltip {
+    max-width: 210px;
+    padding: 8px 12px;
+    margin-right: 10px;
+  }
+
+  .buffalo-wa-status-text {
+    font-size: 0.68rem;
+  }
+
+  .buffalo-wa-tooltip-msg {
+    font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .buffalo-wa-float-container {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .buffalo-wa-tooltip {
+    display: none;
+  }
+}
