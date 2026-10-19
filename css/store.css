@@ -520,28 +520,37 @@
   transform: scale(1.06);
 }
 
-.app-card-body {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 1.5rem 1.35rem 1.5rem;
+.app-card-header {
+  padding: 1.25rem 1.35rem 0.9rem;
   background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  min-height: 4.2rem;
+  border-bottom: 1px solid rgba(43, 18, 76, 0.06);
 }
 
 .app-card-title {
   font-family: var(--font-primary);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: var(--fw-bold);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-carbon-profundo);
-  margin-bottom: 0.6rem;
-  line-height: 1.25;
+  margin: 0;
+  line-height: 1.3;
   transition: color var(--transition-fast);
 }
 
 .app-card:hover .app-card-title {
   color: var(--color-purpura-arquitectonico);
+}
+
+.app-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.35rem 1.35rem 1.5rem;
+  background-color: #FFFFFF;
 }
 
 .app-card-desc {

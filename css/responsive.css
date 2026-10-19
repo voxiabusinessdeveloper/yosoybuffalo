@@ -373,13 +373,18 @@
     gap: 1.5rem;
   }
 
+  .app-card-header {
+    padding: 1rem 1.15rem 0.75rem;
+    min-height: 3.5rem;
+  }
+
   .app-card-body {
-    padding: 1.25rem;
+    padding: 1.15rem;
   }
 
   .app-card-title {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    margin: 0;
   }
 
   .app-card-desc {
