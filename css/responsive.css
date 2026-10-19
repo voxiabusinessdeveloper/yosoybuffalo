@@ -242,6 +242,16 @@
   .project-meta-grid {
     grid-template-columns: 1fr;
   }
+
+  .map-container iframe {
+    height: 320px;
+    min-height: 260px;
+  }
+
+  .map-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* --------------------------------------------------------------------------
