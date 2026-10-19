@@ -927,4 +927,158 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   SECCIÓN CATÁLOGO DE CELOSÍAS (CARRUSEL INFINITO / MARQUEE)
+   -------------------------------------------------------------------------- */
+.section-celosias-catalog {
+  background: var(--color-bg-primary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-xl) 0;
+}
+
+.celosias-catalog-header {
+  margin-bottom: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.celosias-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.celosias-carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: celosiasInfiniteScroll 42s linear infinite;
+}
+
+@keyframes celosiasInfiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.celosia-catalog-card {
+  flex: 0 0 200px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.celosia-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 18;
+  background: #FFFFFF;
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.celosia-card-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.celosia-card-badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background: rgba(25, 0, 25, 0.82);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.celosia-card-body {
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.celosia-card-code {
+  font-size: 0.7rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  color: var(--color-mauve-mineral);
+  text-transform: uppercase;
+}
+
+.celosia-card-title {
+  font-size: 0.95rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-carbon-profundo);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.celosia-card-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-top: 0.2rem;
+}
+
+.celosia-card-footer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed rgba(43, 18, 76, 0.1);
+}
+
+.celosia-card-action {
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.06em;
+  color: var(--color-purpura-arquitectonico);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: transform var(--transition-fast);
+}
+
+.celosia-catalog-card:hover .celosia-card-action {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .celosia-catalog-card {
+    flex: 0 0 230px;
+  }
+}
+
+
 
