@@ -35,12 +35,10 @@
 .hero-overlay-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg, 
-    rgba(250, 244, 240, 0.72) 0%, 
-    rgba(250, 244, 240, 0.45) 50%, 
-    var(--color-bg-primary) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(250, 244, 240, 0.72) 0%,
+      rgba(250, 244, 240, 0.45) 50%,
+      var(--color-bg-primary) 100%);
 }
 
 .hero-content {
@@ -264,12 +262,29 @@
   margin-top: var(--space-lg);
 }
 
-.grid-col-12 { grid-column: span 12; }
-.grid-col-8  { grid-column: span 8; }
-.grid-col-7  { grid-column: span 7; }
-.grid-col-6  { grid-column: span 6; }
-.grid-col-5  { grid-column: span 5; }
-.grid-col-4  { grid-column: span 4; }
+.grid-col-12 {
+  grid-column: span 12;
+}
+
+.grid-col-8 {
+  grid-column: span 8;
+}
+
+.grid-col-7 {
+  grid-column: span 7;
+}
+
+.grid-col-6 {
+  grid-column: span 6;
+}
+
+.grid-col-5 {
+  grid-column: span 5;
+}
+
+.grid-col-4 {
+  grid-column: span 4;
+}
 
 /* Filter Tabs */
 .filter-bar {
@@ -568,12 +583,10 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    180deg, 
-    rgba(25, 0, 25, 0.25) 0%, 
-    rgba(25, 0, 25, 0.65) 50%, 
-    rgba(25, 0, 25, 0.92) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(25, 0, 25, 0.25) 0%,
+      rgba(25, 0, 25, 0.65) 50%,
+      rgba(25, 0, 25, 0.92) 100%);
 }
 
 .project-slide-content {
@@ -985,21 +998,12 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 0.75rem 0;
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.5rem 0;
   mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-}
-
-.celosias-carousel-container::before {
-  content: "";
-  position: absolute;
-  top: 0.75rem;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--color-border);
-  z-index: 1;
-  pointer-events: none;
 }
 
 .celosias-carousel-track {
@@ -1015,6 +1019,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -1023,8 +1028,8 @@
 .celosia-catalog-card {
   flex: 0 0 200px;
   background: #FFFFFF;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -1127,6 +1132,3 @@
     flex: 0 0 230px;
   }
 }
-
-
-
