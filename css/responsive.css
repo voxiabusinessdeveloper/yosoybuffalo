@@ -252,6 +252,11 @@
     width: 100%;
     justify-content: center;
   }
+
+  .celosias-catalog-header .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* --------------------------------------------------------------------------

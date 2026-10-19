@@ -992,6 +992,46 @@
   align-items: flex-end;
   gap: 1.5rem;
   flex-wrap: wrap;
+  background: var(--color-purpura-arquitectonico);
+  padding: clamp(1.75rem, 3.5vw, 3rem);
+  border-radius: 4px;
+  color: #FFFFFF;
+  box-shadow: 0 10px 30px rgba(43, 18, 76, 0.15);
+}
+
+.celosias-catalog-header .label-editorial {
+  color: var(--color-rosa-empolvado);
+}
+
+.celosias-catalog-header .heading-section {
+  color: #FFFFFF;
+}
+
+.celosias-catalog-header .subheading-editorial {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.celosias-catalog-header .btn {
+  background: #FFFFFF;
+  color: var(--color-purpura-arquitectonico);
+  border: 1px solid #FFFFFF;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.15em;
+  padding: 0.95rem 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+}
+
+.celosias-catalog-header .btn:hover {
+  background: var(--color-rosa-empolvado);
+  color: var(--color-purpura-arquitectonico);
+  border-color: var(--color-rosa-empolvado);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .celosias-carousel-container {
