@@ -1094,7 +1094,7 @@
   -webkit-transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  animation: celosiasInfiniteScroll 42s linear infinite;
+  animation: celosiasInfiniteScroll 260s linear infinite;
 }
 
 
@@ -1224,7 +1224,7 @@
 
   .celosias-carousel-track {
     gap: 1rem;
-    animation-duration: 22s; /* Desplazamiento fluido y dinámico en móvil */
+    animation-duration: 160s; /* Desplazamiento fluido y armónico con 75 modelos */
   }
 
   .celosia-catalog-card {
@@ -1248,7 +1248,7 @@
 
   .celosias-carousel-track {
     gap: 0.85rem;
-    animation-duration: 20s; /* Ritmo ideal en pantallas pequeñas */
+    animation-duration: 140s; /* Ritmo ideal en pantallas pequeñas */
   }
 
   .celosia-catalog-card {
