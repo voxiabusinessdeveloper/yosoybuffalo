@@ -1536,6 +1536,26 @@
   text-align: right;
 }
 
+.celosia-formats-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: flex-end;
+}
+
+.celosia-format-chip {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
 /* Botones de acción */
 .celosia-modal-actions-wrap {
   display: flex;

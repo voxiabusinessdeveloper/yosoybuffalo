@@ -114,6 +114,14 @@
                     <span class="celosia-modal-spec-value">Aluminio, Acero al Carbón, MDF, Madera</span>
                   </div>
                   <div class="celosia-modal-spec-row">
+                    <span class="celosia-modal-spec-label">Formatos:</span>
+                    <span class="celosia-modal-spec-value celosia-formats-chips">
+                      <span class="celosia-format-chip">1.22 × 2.44 m</span>
+                      <span class="celosia-format-chip">.90 × 3.05 m</span>
+                      <span class="celosia-format-chip">1.22 × 3.05 m</span>
+                    </span>
+                  </div>
+                  <div class="celosia-modal-spec-row">
                     <span class="celosia-modal-spec-label">Proceso:</span>
                     <span class="celosia-modal-spec-value">Corte Láser & Router CNC de Alta Fidelidad</span>
                   </div>
@@ -122,8 +130,8 @@
                     <span class="celosia-modal-spec-value">Pintura electrostática horneada o natural</span>
                   </div>
                   <div class="celosia-modal-spec-row">
-                    <span class="celosia-modal-spec-label">Medidas:</span>
-                    <span class="celosia-modal-spec-value">Fabricación a medida según tu proyecto</span>
+                    <span class="celosia-modal-spec-label">A medida:</span>
+                    <span class="celosia-modal-spec-value">Fabricación personalizada según tu proyecto</span>
                   </div>
                 </div>
               </div>
