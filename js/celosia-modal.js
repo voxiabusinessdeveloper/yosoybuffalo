@@ -129,10 +129,6 @@
                     <span class="celosia-modal-spec-label">Acabados:</span>
                     <span class="celosia-modal-spec-value">Pintura electrostática horneada o natural</span>
                   </div>
-                  <div class="celosia-modal-spec-row">
-                    <span class="celosia-modal-spec-label">A medida:</span>
-                    <span class="celosia-modal-spec-value">Fabricación personalizada según tu proyecto</span>
-                  </div>
                 </div>
               </div>
 
